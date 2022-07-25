@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {Outlet} from 'react-router-dom'
 import { ADD, JIAN } from '../../store/reduxs/actions-type'
 import {Button} from 'antd'
 class Home extends Component {
@@ -12,6 +13,7 @@ class Home extends Component {
     render() {
         return (
             <div>
+                <Outlet/>
                 <div>Home</div>
                 <div>{this.props.count}</div>
                 <Button type="primary" onClick={this.increment}>加加</Button>
